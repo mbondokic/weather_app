@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  user-select: none;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+@media (min-width: 350px) {
+  body {
+    align-items: flex-start;
+  }
+}
+@media (min-width: 576px) {
+  body {
+    align-items: center;
+  }
+}
+p {
+  margin-bottom: 0;
+}
+.bg-image-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.2s ease;
+}
+.bg-image-holder img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+.content-wrapper {
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+.current {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 576px) {
+  .current {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center .temperature {
+  font-size: 3.5em;
+  line-height: 0.9;
+}
+.daily {
+  display: flex;
+  justify-content: space-around;
+}
+.search-home-btns button {
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #495057;
+  background: #495057;
+}
+.search-home-btns button:hover {
+  background: #fff;
+  color: #495057;
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body img {
+  width: 5%;
+  margin-left: 2%;
+}
+.modal-content {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
